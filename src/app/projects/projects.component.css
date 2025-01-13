@@ -1,0 +1,125 @@
+/* Projects Section */
+.projects-container {
+    /* padding: 40px 60px; */
+    color: #ffffff;
+    /* text-align: center; */
+    margin-bottom: 5rem; /* Adds space below the skills section */
+    margin-left: 5rem;
+}
+
+.projects-title {
+    color: #72efdd;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    letter-spacing: 0.5rem;
+    margin-left: 5rem;
+    /* margin-bottom: 5rem; */
+    margin-top: 3rem;  
+}
+
+/* Projects List */
+.projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 60px; /* Space between projects */
+    align-items: center;
+}
+
+/* Project Card */
+.project-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    align-items: center;
+    justify-content: center;
+    /* margin-right: 15rem; */
+}
+
+/* Project Image */
+.project-image img {
+    width: 600px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 16px;
+    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
+    margin-right: 30rem;
+}
+
+/* Project Details (Overlapping Text Box) */
+.project-details {
+    position: absolute;
+    bottom: -1rem; /* Adjust this value for overlap */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    flex: 0 0 600px; /* Fixed width for the text box */
+    max-width: 600px; /* Set a maximum width */
+    background-color: #112240;
+    padding: 20px 50px;
+    /* border-radius: 16px; */
+    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); Shadow for elevation */
+    z-index: 2; /* Ensure it overlaps the image */
+    text-align: left;
+    margin-left: 15rem;
+}
+
+/* Project Title */
+.project-title {
+    font-size: 19px;
+    font-weight: 450;
+    color: #f2f2f2;
+    margin-bottom: 10px;
+}
+
+/* Project Description */
+.project-description {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+
+/* Project Footer */
+.project-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* GitHub Link */
+.project-link img {
+    width: 50px;
+    height: 53px;
+}
+
+/* Project Tags */
+.project-tags {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 0.8rem;
+}
+
+.project-tags span {
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    color: #72efdd;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .project-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    .project-details {
+        bottom: -20px; /* Adjust overlap for smaller screens */
+        width: 95%;
+    }
+}

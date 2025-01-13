@@ -1,0 +1,96 @@
+/* Work Experience Container */
+.work-experience-container {
+    display: grid;
+    grid-template-columns: 1fr 3fr; /* 1/4 of the width for title, 3/4 for content */
+    gap: 20px; /* Space between the columns */
+    color: #ffffff;
+    padding: 40px 20px;
+  }
+  
+  /* Work Title (Left Column) */
+  .work-title {
+    color: #72efdd;
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.5rem;
+    margin-left: 9rem;
+    margin-top: 3rem;
+    position: sticky; /* Makes it scroll with the page */
+    top: 5rem; /* Stops scrolling when it reaches the top of the viewport */
+    align-self: flex-start;
+  }
+  
+  /* Work Content (Right Column) */
+  .work-content {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem; /* Space between experiences */
+    margin-top: 13rem;
+    margin-left: 10rem;
+
+  }
+  
+  /* Individual Experience Entries */
+  .experience {
+    display: flex;
+    align-items: flex-start; /* Aligns dates and details at the top */
+    gap: 20px;
+  }
+  
+  /* Dates */
+  .experience-dates {
+    min-width: 150px; /* Fixed width for the dates */
+    font-size: 16px;
+    font-weight: 400;
+    color: #f2f2f2; /* Accent color for dates */
+    text-align: left;
+    margin-right: 5rem;
+    margin-top: 1rem;
+  }
+  
+  /* Details */
+  .experience-details {
+    flex: 1; /* Takes up remaining space */
+    text-align: left;
+    font-weight: 350;
+  }
+  
+  /* Job Title */
+  .job-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  /* Company Name */
+  .company-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #f2f2f2; /* Subtle secondary color */
+    margin-bottom: 10px;
+  }
+  
+  /* Job Description */
+  .job-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.6;
+  }
+  
+  /* Tags */
+  .tags {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+  
+  .tag {
+    font-size: 12px;
+    padding: 5px 15px;
+    background-color: transparent;
+    border: 1px solid #72efdd;
+    border-radius: 15px;
+    color: #72efdd;
+    text-align: center;
+  }

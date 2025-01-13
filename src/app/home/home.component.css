@@ -1,0 +1,31 @@
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px; /* Adjust as needed for the size */
+    height: 40px; /* Adjust to match width */
+    font-size: 24px; /* Size of the caret */
+    color: #72efdd; /* Caret color */
+    border: 2px solid #72efdd; /* Border color */
+    border-radius: 50%; /* Makes it circular */
+    background-color: transparent; /* Transparent background */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    cursor: pointer;
+    display: flex; /* Flexbox for centering */
+    align-items: center; /* Vertical alignment */
+    justify-content: center; /* Horizontal alignment */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .scroll-to-top:hover {
+    background-color: rgba(114, 239, 221, 0.1); /* Light hover effect */
+    transform: scale(1.1); /* Slight scaling on hover */
+  }
+  
+  .scroll-to-top::before {
+    content: "⌃"; /* Insert the inverted caret */
+    font-size: 24px; /* Size of the caret */
+    line-height: 1; /* Align caret properly */
+    display: block; /* Ensures proper spacing */
+    transform: translateY(3px); /* Move the caret slightly lower */
+  }
