@@ -44,7 +44,7 @@ html, body {
 }
 
 .navbar .logo img {
-  width: 8.5rem;
+  width: 10rem;
   height: auto;
   margin: 0;
 }
@@ -92,7 +92,7 @@ html, body {
 
 .hero-content h1.typewriter {
   font-family: 'Roboto Mono', monospace;
-  font-size: 4rem;
+  font-size: 7rem;
   color: #64FFDA;
   margin-bottom: -1rem;
   display: inline-block;

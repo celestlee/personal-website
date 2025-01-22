@@ -44,7 +44,7 @@
 }
 
 .experience-dates {
-  font-size: 14px;
+  font-size: 1.2rem;
   font-weight: 400;
   color: #f2f2f2;
   text-align: left;
@@ -72,7 +72,7 @@
 }
 
 .experience-details {
-  font-size: 14px;
+  font-size: 1.2rem;
   text-align: left;
   transition: color 0.3s ease;
 }

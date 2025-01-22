@@ -1,9 +1,10 @@
+
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 35px; 
-    height: 35px;
+    height: auto;
     font-size: 24px; 
     color: #72efdd;
     border: 2px solid #72efdd; 
@@ -19,7 +20,7 @@
   
   .scroll-to-top:hover {
     background-color: rgba(114, 239, 221, 0.1); 
-    /* transform: scale(1.1);  */
+    transform: scale(1.1); 
   }
   
   .scroll-to-top::before {
@@ -30,91 +31,40 @@
     transform: translateY(3px); 
   }
 
-@media (max-width: 700) {
-
+  @media (max-width: 480px) {
     .navbar .logo img {
-      width: 60px;
-      margin-top: 10px;
-    }
-  
-    .nav-links {
-      display: none; 
-    }
-  
-    .hero-container {
-      min-height: calc(100vh - 65px);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 20px;
-    }
-  
-    .hero-content {
-      margin-top: 0;
-      margin-left: 0;
-      padding: 0 10px;
-    }
-  
-    .hero-content h1.typewriter {
-      font-size: 1.6rem;
-      width: 12ch;
-    }
-  
-    .hero-content h2 {
-      font-size: 1.1rem;
-    }
-  
-    .hero-content p {
-      font-size: 0.9rem;
-      line-height: 1.4;
-      max-width: 90%;
-    }
-  
-    .scroll-down {
-      position: absolute;
-      bottom: 15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 50px;
-    }
-  
-    .scroll-capsule {
-      width: 30px;
-      height: 50px;
-      border-width: 1.5px;
-    }
-  
-    .scroll-dot {
-      width: 6px;
-      height: 6px;
-      margin-top: 8px;
+      width: 111px !important;
+      height: auto !important;
+      margin-top: 15px !important;
     }
   }
-  
-  @media (min-width: 430px) and (max-width: 768px) {
+
+  @media  (max-width: 768px) {
     .navbar .logo img {
-      width: 80px; 
+      width: 120px; 
       margin-top: 15px;
+      margin-right: 10px;
     }
   
     .hero-container {
       padding: 30px;
     }
+
+    .hero-content {
+      margin-bottom: 5rem;
+    }
   
     .hero-content h1.typewriter {
-      font-size: 2rem;
+      font-size: 3rem !important;
       width: 14ch;
     }
   
     .hero-content h2 {
-      font-size: 1.3rem;
+      font-size: 2rem;
     }
   
     .hero-content p {
-      font-size: 1rem;
+      font-size: 1.5rem;
       line-height: 1.5;
       max-width: 85%;
     }
@@ -158,16 +108,16 @@
     }
   
     .hero-content h1.typewriter {
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       width: 16ch;
     }
   
     .hero-content h2 {
-      font-size: 1.6rem;
+      font-size: 2rem;
     }
   
     .hero-content p {
-      font-size: 1.2rem;
+      font-size: 1.5rem;
       line-height: 1.7;
       max-width: 70%;
     }

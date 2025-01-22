@@ -33,6 +33,7 @@
   opacity: 0;
   transform: translateY(20px); 
   transition: opacity 0.6s ease, transform 0.6s ease; 
+  gap: 0 !important;
 }
 
 .project-card.fade-in {
@@ -54,6 +55,8 @@
 .project-image {
   margin: 0; /* Ensure no extra margin is added */
   padding: 0; 
+  text-align: center; /* Ensure inline content is centered */
+
 }
 
 .project-details {
@@ -96,7 +99,7 @@
 .project-tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 1rem;
 }
 
 .project-tags span {
@@ -125,6 +128,13 @@
     height: auto;
     margin: 0 auto; 
     padding: 0; 
+  }
+
+  .project-image {
+    margin: 0 auto; 
+    max-width: 100%; 
+    padding: 0; 
+    align-items: center;
   }
 
   .project-details {
