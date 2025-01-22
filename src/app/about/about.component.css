@@ -1,91 +1,110 @@
 .about-container {
-    display: flex;
-    max-width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    color: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-    margin-left: 9rem;
-    margin-top: -2rem;
-  }
-  
-  .about-content {
-    max-width: 60%;
-  }
-  
-  .about-title {
-    color: #72efdd;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 3.5rem;
-    letter-spacing: 0.5rem;
-  }
-  
-  .about-intro {
-    font-size: 17px;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    line-height: 1.3;
-    letter-spacing: 0.5px;
-  }
-  
-  .about-description,
-  .about-details,
-  .about-extra {
-    font-size: 17px;
-    margin-bottom: 2rem;
-    font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  text-align: center;
+}
 
+.about-title {
+  color: #72efdd;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 7rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.3rem;
+  text-align: center; 
+}
+
+.about-content {
+  max-width: 100%;
+  padding: 0 25px;
+  text-align: justify;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.about-image img {
+  width: 100%;
+  max-width: 13rem;
+  height: auto;
+  border-radius: 1.1875rem;
+  object-fit: cover;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.about-text {
+  font-size: 1aboutaborem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .about-container {
+    padding: 50px 79px;
   }
-  
-  .about-call-to-action {
-    font-size: 17px;
-    font-weight: bold;
-    color: #f2f2f2;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+
+  .about-title {
+    text-align: center; 
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    max-width: 60%; 
+    letter-spacing: 0.3rem;
+    margin-left: auto;
+    margin-right: auto; 
   }
-  
+
+  .about-content {
+    flex-direction: row; 
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 5rem;
+  }
+
   .about-image {
-    flex: 0 0 auto; /* Prevents image from stretching */
-    max-width: 35%; /* Adjusts the image size relative to the container */
-    margin-right: 11rem;
-    margin-top: 9rem;
+    margin-top: 7rem;
   }
-  
+
   .about-image img {
-    width: 100%; /* Makes the image responsive */
-    max-width: 300px; /* Limits the image width */
-    height: auto; /* Maintains aspect ratio */
-    max-height: 400px; /* Prevents the image from being too tall */
-    border-radius: 19px; /* Adds rounded corners */
-    object-fit: cover; /* Ensures the image fits within its container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for better design */
+    max-width: 15rem;
   }
-  
-  /* Responsive adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .about-container {
-      flex-direction: column; /* Stacks text and image vertically */
-      align-items: center; /* Center-aligns the content */
-    }
-  
-    .about-content {
-      max-width: 100%; /* Allows the text to take full width */
-      text-align: center; /* Optional: Center-align text for smaller screens */
-    }
-  
-    .about-image {
-      max-width: 80%; /* Allows the image to be larger on smaller screens */
-    }
+
+  .about-text {
+    font-size: 1rem;
+    max-width: 60%;
+    text-align: justify;
+    line-height: 1.8;
   }
-  
-  @media (max-width: 480px) {
-    .about-image img {
-      max-width: 200px; /* Further reduces image size for mobile devices */
-      max-height: 300px; /* Adjusts the height for better proportions */
-    }
+}
+
+@media (min-width: 1024px) {
+  .about-title {
+    text-align: left;
+    margin-left: 0; 
+    margin-right: 0;
   }
+
+  .about-content {
+    max-width: 1200px;
+  }
+
+  .about-image {
+    flex: 0 0 40%;
+  }
+
+  .about-text {
+    flex: 1;
+  }
+}

@@ -1,101 +1,82 @@
-/* Import Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Roboto+Mono:wght@400;700&display=swap');
 
-/* Root Variables */
 :root {
   --bg-color: #0B192F;
   --text-color: #F2F2F2;
   --accent-color: #64FFDA;
 }
 
-/* Global Styles */
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
 html, body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-color);
   color: var(--text-color);
-  font-family: 'Inter', sans-serif; 
+  font-family: 'Inter', sans-serif;
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 *, *::before, *::after {
   box-sizing: inherit;
 }
 
-/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 0 ; /* Reduces the vertical padding for a thinner navbar */
+  padding: 0 1.5rem;
   width: 100%;
-  top: 0; 
+  position: sticky;
+  top: 0;
   background-color: #0B192F;
+  z-index: 10;
 }
 
 .navbar .logo {
   display: flex;
   align-items: center;
-  margin-top: -2rem;
-  margin-left: 0rem;
+  margin-top: -1.5rem;
 }
 
 .navbar .logo img {
-  width: 150px; /* Set a specific width for the logo */
-  height: auto; /* Maintain the aspect ratio */
-  max-width: 100%; /* Ensures responsiveness */
+  width: 8.5rem;
+  height: auto;
   margin: 0;
-}
-
-@media (max-width: 768px) {
-  .main-logo img {
-    width: 30px; /* Smaller logo size for tablets */
-  }
-}
-
-@media (max-width: 480px) {
-  .main-logo img {
-    width: 30px; /* Smaller logo size for mobile devices */
-  }
-}
-
-.logo-tag {
-  font-weight: 700;
-  color: var(--accent-color);
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 6rem;
+  gap: 2rem;
   margin: 0;
   padding: 0;
-  margin-top: -2rem;
-  margin-right: 5rem;
 }
 
 .nav-links li a {
-  font-family: 'Inter', sans-serif;  
-  font-weight: 300;       
-  font-size: 17px;        
-  color: #F2F2F2;        
-  text-decoration: none;   
-  transition: color 0.3s;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
+  font-weight: 350;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .nav-links li a:hover {
-  color: #64FFDA;  
+  color: var(--accent-color);
 }
 
-/* Hero Section Styles */
 .hero-container {
   width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  padding: 2rem;
+  justify-content: center;
+  padding: 1.25rem;
   background-color: var(--bg-color);
   color: var(--text-color);
   box-sizing: border-box;
@@ -104,24 +85,22 @@ html, body {
 
 .hero-content {
   margin-top: -12rem;
-  margin-left: 12rem;   
-  max-width: 800px;
-  text-align: left;    
+  margin-left: 12rem;
+  max-width: 50rem;
+  text-align: left;
 }
 
 .hero-content h1.typewriter {
   font-family: 'Roboto Mono', monospace;
   font-size: 3rem;
-  color: #64FFDA; 
+  color: #64FFDA;
   margin-bottom: -1rem;
-  
   display: inline-block;
   white-space: nowrap;
   overflow: hidden;
-  
-  letter-spacing: 0; 
+  letter-spacing: 0;
   width: 14ch;
-  animation: typing 2.5s steps(14, end) forwards;  
+  animation: typing 2.5s steps(14, end) forwards;
 }
 
 @keyframes typing {
@@ -140,7 +119,7 @@ html, body {
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 1rem;
-  max-width: 700px;
+  max-width: 43.75rem;
 }
 
 .scroll-down {
@@ -148,57 +127,54 @@ html, body {
   justify-content: center;
   align-items: center;
   position: absolute;
-  bottom: 2rem; 
-  left: 50%; 
-  transform: translateX(-50%); 
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .scroll-capsule {
-  width: 45px; 
-  height: 70px; 
-  border: 2px solid #64FFDA; 
-  border-radius: 50px; 
-  position: relative;
+  width: 2.8125rem;
+  height: 4.375rem;
+  border: 0.125rem solid #64FFDA;
+  border-radius: 3.125rem;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .scroll-dot {
-  width: 10px;
-  height: 10px;
-  background-color: #64FFDA; 
-  border-radius: 50%; 
-  position: relative; 
-  margin-top: 10px; 
-  animation: scroll-down 2s infinite; 
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: #64FFDA;
+  border-radius: 50%;
+  margin-top: 0.625rem;
+  animation: scroll-down 2s infinite;
 }
 
 @keyframes scroll-down {
   0% {
-    transform: translateY(0); 
+    transform: translateY(0);
     opacity: 1;
   }
   100% {
-    transform: translateY(40px); 
-    opacity: 0; 
+    transform: translateY(2.5rem);
+    opacity: 0;
   }
 }
 
-/* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  bottom: 1.25rem;
+  right: 1.25rem;
+  width: 3.125rem;
+  height: 3.125rem;
   background-color: #72efdd;
   color: #0e1120;
-  font-size: 24px;
+  font-size: 1.5rem;
   border: none;
   border-radius: 50%;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.2);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
@@ -212,4 +188,81 @@ html, body {
 
 .scroll-to-top:hover {
   background-color: #50c7b3;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 13px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 12px;
+  }
+
+  .navbar .logo img {
+    width: 60px;
+    margin-top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero-container {
+    min-height: calc(100vh - 65px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .hero-content {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0 10px;
+  }
+
+  .hero-content h1.typewriter {
+    font-size: 1.6rem;
+    width: 12ch;
+  }
+
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    max-width: 90%;
+  }
+
+  .scroll-down {
+    bottom: 15px;
+    width: 30px;
+    height: 50px;
+  }
+
+  .scroll-capsule {
+    width: 30px;
+    height: 50px;
+    border-width: 1.5px;
+  }
+
+  .scroll-dot {
+    width: 6px;
+    height: 6px;
+    margin-top: 8px;
+  }
 }

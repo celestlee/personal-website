@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const text = "Hi, I'm Celest"; // The text to display
-    const typingSpeed = 150; // Typing speed in milliseconds
+    const text = "Hi, I'm Celest"; 
+    const typingSpeed = 150; 
     const typewriterTextContent = document.querySelector('.typewriter-text-content');
   
     let index = 0;
@@ -13,5 +13,5 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   
-    typeText(); // Start the typing effect
+    typeText();
   });

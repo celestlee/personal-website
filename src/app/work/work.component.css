@@ -1,96 +1,207 @@
-/* Work Experience Container */
 .work-experience-container {
-    display: grid;
-    grid-template-columns: 1fr 3fr; /* 1/4 of the width for title, 3/4 for content */
-    gap: 20px; /* Space between the columns */
-    color: #ffffff;
-    padding: 40px 20px;
-  }
-  
-  /* Work Title (Left Column) */
-  .work-title {
-    color: #72efdd;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 3.5rem;
-    letter-spacing: 0.5rem;
-    margin-left: 9rem;
-    margin-top: 3rem;
-    position: sticky; /* Makes it scroll with the page */
-    top: 5rem; /* Stops scrolling when it reaches the top of the viewport */
-    align-self: flex-start;
-  }
-  
-  /* Work Content (Right Column) */
-  .work-content {
-    display: flex;
-    flex-direction: column;
-    gap: 3rem; /* Space between experiences */
-    margin-top: 13rem;
-    margin-left: 10rem;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  color: #ffffff;
+  margin: 0 auto;
+  max-width: 1200px;
+}
 
+.work-title {
+  color: #72efdd;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.work-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 30px;
+}
+
+.experience {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+  padding: 20px 50px 35px 35px;
+  background: #112240;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.experience:hover {
+  background: #11224099;
+  transform: scale(1.02);
+}
+
+.experience-dates {
+  font-size: 14px;
+  font-weight: 400;
+  color: #f2f2f2;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  white-space: nowrap;
+  width: auto;
+  padding-right: 15px;
+}
+
+.experience-dates::after {
+  content: '';
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #f2f2f2;
+  transition: width 0.3s ease;
+  position: absolute;
+  left: 0;
+}
+
+.experience:hover .experience-dates::after {
+  width: 93%;
+}
+
+.experience-details {
+  font-size: 14px;
+  text-align: left;
+  transition: color 0.3s ease;
+}
+
+.job-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.company-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #f2f2f2;
+  margin-bottom: 10px;
+}
+
+.job-description {
+  font-size: 14px;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: transparent;
+  border: 1px solid #72efdd;
+  border-radius: 15px;
+  color: #72efdd;
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .work-experience-container {
+    padding: 40px;
+    margin-top: 3rem;
   }
-  
-  /* Individual Experience Entries */
+
+  .work-title {
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+    text-align: left;
+    letter-spacing: 0.3rem;
+    margin-left: 3.5rem;
+  }
+
+  .work-content {
+    margin-top: 2rem;
+    gap: 3rem;
+  }
+
   .experience {
-    display: flex;
-    align-items: flex-start; /* Aligns dates and details at the top */
-    gap: 20px;
+    flex-direction: row;
+    padding: 30px;
+    gap: 3rem;
+    max-width: 700px;
   }
-  
-  /* Dates */
+
   .experience-dates {
-    min-width: 150px; /* Fixed width for the dates */
+    min-width: 150px;
     font-size: 16px;
-    font-weight: 400;
-    color: #f2f2f2; /* Accent color for dates */
-    text-align: left;
-    margin-right: 5rem;
-    margin-top: 1rem;
+    padding-right: 6rem;
   }
-  
-  /* Details */
+
   .experience-details {
-    flex: 1; /* Takes up remaining space */
-    text-align: left;
-    font-weight: 350;
+    font-size: 16px;
   }
-  
-  /* Job Title */
+
   .job-title {
     font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
   }
-  
-  /* Company Name */
+
   .company-name {
     font-size: 16px;
-    font-weight: 500;
-    color: #f2f2f2; /* Subtle secondary color */
-    margin-bottom: 10px;
   }
-  
-  /* Job Description */
+
   .job-description {
-    font-size: 14px;
-    margin-bottom: 15px;
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.8;
   }
-  
-  /* Tags */
+
   .tags {
-    display: flex;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .work-title {
+    font-size: 2.5rem;
+    margin-bottom: 3.5rem;
+    letter-spacing: 0.5rem;
+    margin-left: 2rem;
+  }
+
+  .work-content {
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .experience {
+    flex-direction: row;
+    padding: 30px;
+    gap: 3rem;
+    max-width: 900px;
+  }
+
+  .experience-dates {
+    font-size: 18px;
+    padding-right: 5rem;
+  }
+
+  .job-title {
+    font-size: 20px;
+  }
+
+  .job-description {
+    font-size: 16px;
+  }
+
+  .tags {
     gap: 1rem;
-    margin-top: 1.5rem;
   }
-  
-  .tag {
-    font-size: 12px;
-    padding: 5px 15px;
-    background-color: transparent;
-    border: 1px solid #72efdd;
-    border-radius: 15px;
-    color: #72efdd;
-    text-align: center;
-  }
+}

@@ -4,6 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
-  standalone: true, // If using standalone component
+  standalone: true, 
 })
 export class SkillsComponent {}

@@ -2,30 +2,181 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 40px; /* Adjust as needed for the size */
-    height: 40px; /* Adjust to match width */
-    font-size: 24px; /* Size of the caret */
-    color: #72efdd; /* Caret color */
-    border: 2px solid #72efdd; /* Border color */
-    border-radius: 50%; /* Makes it circular */
-    background-color: transparent; /* Transparent background */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Optional shadow */
+    width: 40px; 
+    height: 40px;
+    font-size: 24px; 
+    color: #72efdd;
+    border: 2px solid #72efdd; 
+    border-radius: 50%; 
+    background-color: transparent; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    display: flex; /* Flexbox for centering */
-    align-items: center; /* Vertical alignment */
-    justify-content: center; /* Horizontal alignment */
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
     transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+  } 
   
   .scroll-to-top:hover {
-    background-color: rgba(114, 239, 221, 0.1); /* Light hover effect */
-    transform: scale(1.1); /* Slight scaling on hover */
+    background-color: rgba(114, 239, 221, 0.1); 
+    transform: scale(1.1); 
   }
   
   .scroll-to-top::before {
-    content: "⌃"; /* Insert the inverted caret */
-    font-size: 24px; /* Size of the caret */
-    line-height: 1; /* Align caret properly */
-    display: block; /* Ensures proper spacing */
-    transform: translateY(3px); /* Move the caret slightly lower */
+    content: "⌃";
+    font-size: 24px; 
+    line-height: 1; 
+    display: block; 
+    transform: translateY(3px); 
+  }
+
+@media (max-width: 700) {
+    .navbar .logo img {
+      width: 60px;
+      margin-top: 10px;
+    }
+  
+    .nav-links {
+      display: none; 
+    }
+  
+    .hero-container {
+      min-height: calc(100vh - 65px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+    }
+  
+    .hero-content {
+      margin-top: 0;
+      margin-left: 0;
+      padding: 0 10px;
+    }
+  
+    .hero-content h1.typewriter {
+      font-size: 1.6rem;
+      width: 12ch;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.1rem;
+    }
+  
+    .hero-content p {
+      font-size: 0.9rem;
+      line-height: 1.4;
+      max-width: 90%;
+    }
+  
+    .scroll-down {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 30px;
+      height: 50px;
+    }
+  
+    .scroll-capsule {
+      width: 30px;
+      height: 50px;
+      border-width: 1.5px;
+    }
+  
+    .scroll-dot {
+      width: 6px;
+      height: 6px;
+      margin-top: 8px;
+    }
+  }
+  
+  @media (min-width: 430px) and (max-width: 768px) {
+    .navbar .logo img {
+      width: 80px; 
+      margin-top: 15px;
+    }
+  
+    .hero-container {
+      padding: 30px;
+    }
+  
+    .hero-content h1.typewriter {
+      font-size: 2rem;
+      width: 14ch;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.3rem;
+    }
+  
+    .hero-content p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 85%;
+    }
+  
+    .scroll-down {
+      bottom: 20px;
+      width: 35px;
+      height: 60px;
+    }
+  
+    .scroll-capsule {
+      width: 35px;
+      height: 60px;
+    }
+  
+    .scroll-dot {
+      width: 8px;
+      height: 8px;
+      margin-top: 10px;
+    }
+  }
+  
+  @media (min-width: 768px){
+    .navbar .logo img {
+      width: 185px;
+      margin-top: -1rem;
+    }
+
+    .nav-links {
+      margin-right: 5rem;
+      margin-top: -2rem;
+      gap: 3rem;
+    }
+  
+    .hero-content h1.typewriter {
+      font-size: 2.5rem;
+      width: 16ch;
+    }
+  
+    .hero-content h2 {
+      font-size: 1.6rem;
+    }
+  
+    .hero-content p {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      max-width: 70%;
+    }
+  
+    .scroll-down {
+      bottom: 25px;
+      width: 40px;
+      height: 70px;
+    }
+  
+    .scroll-capsule {
+      width: 40px;
+      height: 70px;
+    }
+  
+    .scroll-dot {
+      width: 10px;
+      height: 10px;
+      margin-top: 12px;
+    }
   }

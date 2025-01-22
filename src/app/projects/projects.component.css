@@ -1,125 +1,253 @@
-/* Projects Section */
 .projects-container {
-    /* padding: 40px 60px; */
-    color: #ffffff;
-    /* text-align: center; */
-    margin-bottom: 5rem; /* Adds space below the skills section */
-    margin-left: 5rem;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 1200px;
 }
 
 .projects-title {
-    color: #72efdd;
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 2rem;
-    letter-spacing: 0.5rem;
-    margin-left: 5rem;
-    /* margin-bottom: 5rem; */
-    margin-top: 3rem;  
+  color: #72efdd;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-top: 5rem; 
+  letter-spacing: 0.3rem;
+  margin-bottom: 0rem;
+  text-align: center;
 }
 
-/* Projects List */
 .projects-list {
-    display: flex;
-    flex-direction: column;
-    gap: 60px; /* Space between projects */
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem; 
+  align-items: center;
+  margin-top: 0; 
+  padding: 0;
 }
 
-/* Project Card */
 .project-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1200px;
-    align-items: center;
-    justify-content: center;
-    /* margin-right: 15rem; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem; 
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 1200px;
+  opacity: 0;
+  transform: translateY(20px); 
+  transition: opacity 0.6s ease, transform 0.6s ease; 
 }
 
-/* Project Image */
+.project-card.fade-in {
+  opacity: 1;
+  transform: translateY(0); 
+}
+
 .project-image img {
-    width: 600px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 16px;
-    /* box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); */
-    margin-right: 30rem;
+  width: 100%;
+  max-width: 600px; 
+  height: auto;
+  object-fit: cover;
+  margin-left: 2rem;
+  border-radius: 16px;
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Project Details (Overlapping Text Box) */
 .project-details {
-    position: absolute;
-    bottom: -1rem; /* Adjust this value for overlap */
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    flex: 0 0 600px; /* Fixed width for the text box */
-    max-width: 600px; /* Set a maximum width */
-    background-color: #112240;
-    padding: 20px 50px;
-    /* border-radius: 16px; */
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); Shadow for elevation */
-    z-index: 2; /* Ensure it overlaps the image */
-    text-align: left;
-    margin-left: 15rem;
+  background-color: #112240;
+  padding: 20px 30px;
+  border-radius: 16px;
+  max-width: 600px; 
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-/* Project Title */
-.project-title {
-    font-size: 19px;
-    font-weight: 450;
-    color: #f2f2f2;
-    margin-bottom: 10px;
+.project-details .project-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #f2f2f2;
+  margin-bottom: 10px;
 }
 
-/* Project Description */
-.project-description {
-    font-size: 14px;
-    font-weight: 300;
-    line-height: 1.6;
-    margin-bottom: 20px;
-    color: #f2f2f2;
+.project-details .project-description {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: #f2f2f2;
 }
 
-/* Project Footer */
 .project-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* GitHub Link */
 .project-link img {
-    width: 50px;
-    height: 53px;
+  width: 40px;
+  height: 40px;
 }
 
-/* Project Tags */
 .project-tags {
-    display: flex;
-    gap: 2rem;
-    margin-bottom: 0.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
 
 .project-tags span {
-    font-size: 14px;
-    font-family: 'Roboto Mono', monospace;
-    color: #72efdd;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+  font-size: 12px;
+  font-family: 'Roboto Mono', monospace;
+  color: #72efdd;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
 }
 
-/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .project-image img {
-        width: 100%;
-        height: auto;
-    }
+  .projects-list {
+    gap: 1.5rem; 
+  }
 
-    .project-details {
-        bottom: -20px; /* Adjust overlap for smaller screens */
-        width: 95%;
-    }
+  .project-card {
+    flex-direction: column;
+    align-items: center;
+    gap: -3rem; 
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-image img {
+    max-width: 100%; 
+    height: auto;
+    margin: 0 auto; 
+    padding: 0; 
+  }
+
+  .project-details {
+    padding: 15px 20px;
+    margin: 0 auto; 
+    max-width: 100%;
+    text-align: center; 
+  }
+
+  .project-title {
+    font-size: 1.4rem;
+    margin-bottom: 10px; 
+  }
+
+  .project-description {
+    font-size: 13px;
+    margin-bottom: 10px; 
+    line-height: 1.5; 
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects-list {
+    gap: 2rem; 
+  }
+
+  .project-card {
+    flex-direction: column; 
+    align-items: center;
+    gap: 1.2rem; 
+    margin: 0;
+    padding: 0; 
+  }
+
+  .project-image img {
+    max-width: 90%; 
+    height: auto;
+    margin: 0 auto; 
+  }
+
+  .project-details {
+    padding: 20px 30px;
+    margin: 0 auto; 
+    max-width: 90%; 
+    text-align: center; 
+  }
+
+  .project-title {
+    font-size: 1.6rem;
+    margin-bottom: 10px; 
+  }
+
+  .project-description {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.6; 
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .projects-container {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: 1200px;
+  }
+
+  .projects-title {
+    text-align: left;
+    margin-left: 5rem;
+    font-size: 2.75rem;
+    margin-bottom: 2rem; 
+    letter-spacing: 0.3rem;
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0rem; 
+    align-items: center;
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem; 
+    margin: 0; 
+    padding: 0; 
+    margin-bottom: 1rem; 
+  }
+
+  .project-card:last-child {
+    margin-bottom: 0; 
+  }
+
+  .project-image img {
+    max-width: 600px;
+    height: auto;
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .project-details {
+    background-color: #112240;
+    padding: 25px 40px;
+    border-radius: 16px;
+    max-width: 600px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0; 
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    margin: 0 0 10px 0; 
+  }
+
+  .project-description {
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0 0 10px 0; 
+  }
+
+  .project-footer {
+    margin: 0; 
+    padding: 0; 
+  }
+
+  .projects-list .project-card + .project-card {
+    margin-top: 1rem;
+  }
 }

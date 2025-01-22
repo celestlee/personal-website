@@ -1,60 +1,64 @@
 <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img routerLink="/" routerLinkActive="active" src="assets/images/icon.png" alt="Icon" />
+  <nav class="navbar">
+    <div class="logo">
+      <img routerLink="/" routerLinkActive="active" src="assets/images/icon.png" alt="Icon" />
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>    
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#projects">Projects</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero-container" id="home">
+    <div class="hero-content scroll-animate">
+      <h1 class="typewriter">Hi, I’m Celest</h1>
+      <h2>A Software Engineer</h2>
+      <p>
+        Full Stack Developer passionate about AI and ML, <br />
+        bringing code to life — from the first line to final deployment.
+      </p>
+    </div>
+    <div class="scroll-down">
+      <div class="scroll-capsule">
+        <div class="scroll-dot"></div>
       </div>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-        <li><a href="#projects">Projects</a></li>
-      </ul>
-    </nav>
-  
-    <section class="hero-container" id="home">
-        <div class="hero-content">
-          <h1 class="typewriter">
-            Hi, I’m Celest
-          </h1>        
-          <h2>A Software Engineer</h2>
-          <p>
-            Full Stack Developer passionate about AI and ML, <br>
-            bringing code to life — from the first line to final deployment.
-          </p>
-        </div>
-        <div class="scroll-down">
-          <div class="scroll-capsule">
-            <div class="scroll-dot"></div>
-          </div>
-        </div>
-      </section>
+    </div>
+  </section>
+
+  <section id="about" class="about-section">
+    <app-about></app-about>
+  </section>
+
+  <section id="work" class="work-section">
+    <app-work></app-work>
+  </section>
+
+  <section id="skills" class="skills-section">
+    <app-skills></app-skills>
+  </section>
+
+  <section id="projects" class="projects-section">
+    <app-projects></app-projects>
+  </section>
+
+  <section id="connect" class="connect-section">
+    <app-connect></app-connect>
+  </section>
+
+  <button id="scrollToTop" class="scroll-to-top" title="Scroll to Top" (click)="scrollToTop()" [ngClass]="{ 'show': showScrollToTop }">
     
-      <section id="about" class="about-section">
-        <app-about></app-about>
-      </section>
+  </button>
 
-          
-      <section id="work" class="work-section">
-        <app-work></app-work>
-      </section>
-    
-      <section id="skills" class="skills-section">
-        <app-skills></app-skills>
-      </section>
-
-      <section id="projects" class="projects-section">
-        <app-projects></app-projects>
-      </section>
-
-      <section id="connect" class="connect-section">
-        <app-connect></app-connect>
-      </section>
-
-      <button
-      id="scrollToTop"
-      class="scroll-to-top"
-      title="Scroll to Top"
-      [ngClass]="{ 'show': showScrollToTop }"
-      (click)="scrollToTop()"
-    >
-    
-    </button>    </body>
+  <script>
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('show');
+    }
+  </script>
+</body>
