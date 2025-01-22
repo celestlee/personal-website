@@ -92,7 +92,7 @@ html, body {
 
 .hero-content h1.typewriter {
   font-family: 'Roboto Mono', monospace;
-  font-size: 3rem;
+  font-size: 4rem;
   color: #64FFDA;
   margin-bottom: -1rem;
   display: inline-block;
@@ -109,13 +109,13 @@ html, body {
 }
 
 .hero-content h2 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 1rem;
   color: #F2F2F2;
 }
 
 .hero-content p {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   line-height: 1.7;
   margin-bottom: 1rem;
