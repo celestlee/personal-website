@@ -4,6 +4,7 @@
   --bg-color: #0B192F;
   --text-color: #F2F2F2;
   --accent-color: #64FFDA;
+    font-family: 'Inter', sans-serif, 'Roboto Mono';
 }
 
 html {
