@@ -4,7 +4,7 @@
     bottom: 20px;
     right: 20px;
     width: 35px; 
-    height: auto;
+    height: 38px;
     font-size: 24px; 
     color: #72efdd;
     border: 2px solid #72efdd; 
@@ -32,6 +32,15 @@
   }
 
   @media (max-width: 480px) {
+    .hero-container {
+      min-height: calc(100vh - 65px); /* Full screen minus navbar height */
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin-top: -50px;
+    }
+
     .navbar .logo img {
       width: 111px !important;
       height: auto !important;
@@ -39,23 +48,6 @@
       margin-left: 0px !important;
     }
 
-
-  .scroll-to-top { 
-    position: fixed;
-    bottom: 20px;
-    right: 0px;
-    width: 40px; 
-    height: 45px;
-    font-size: 24px; 
-    color: #72efdd;
-    background-color: transparent; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    } 
 }
 
 
