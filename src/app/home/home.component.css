@@ -3,8 +3,8 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 25px; 
-    height: 38px;
+    width: 20px; 
+    height: 30px;
     font-size: 24px; 
     color: #72efdd;
     border: 2px solid #72efdd; 
@@ -50,23 +50,24 @@
 
 }
 
+@media  (min-width: 481px) and (max-width: 768px) {
+  .scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px; 
+    height: 40px;
+  }
 
-  @media  (min-width: 481px) and (max-width: 768px) {
+}
+
+
+  @media   (max-width: 768px) {
     .navbar .logo img {
       width: 120px; 
       margin-top: 15px;
       margin-right: 10px;
     }
-
-    .scroll-to-top {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 40px; 
-      height: 40px;
-    }
-
-
   
     .hero-container {
       padding: 30px;
